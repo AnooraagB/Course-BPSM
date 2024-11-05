@@ -1,0 +1,17 @@
+#p3/user/bin/bash
+
+flygenedata = open("data.csv")
+for geneline in flygenedata:
+	geneallinfo = geneline.split(",")
+	species = geneallinfo[0]
+	sequence = geneallinfo[1].upper()
+	sequencelengths = len(geneallinfo[1])
+	genenames=geneallinfo[2]
+	expressionlevel=int(geneallinfo[3])
+	atcontent = (sequence.count('A')+sequence.couny('T'))/sequencelengths	
+     atstatus = "low"
+     if(atcontent >= 0.45 and atcontent <= 0.65) :
+             atstatus="medium"
+     if(atcontent>0.65) :
+             atstatus="high"
+

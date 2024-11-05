@@ -1,0 +1,58 @@
+#!/usr/bin/python3
+##Q.1
+seq = "ACTGATCGATTACGTATAGTATTTGCTATCATACATATATATCGATGCGTTCAT"
+len(seq)
+seq.count("A")
+seq.count("T")
+sequence_length = len(seq)
+number_of_A = seq.count("A")
+number_of_T = seq.count("T")
+A_and_T_content = (number_of_A + number_of_T)/sequence_length
+A_and_T_content
+
+##Q.2
+seq
+complement_a_t = seq_2.replace("A", "t")
+complement_t_a = complement_a_t.replace("T", "a")
+complement_c_g = complement_t_a.replace("C", "g")
+complement_g_c = complement_c_g.replace("G", "c")
+complement_g_c
+complement = complement_g_c.upper()
+complement
+
+##Q.3
+seq_3 = "ACTGATCGATTACGTATAGTAGAATTCTATCATACATATATATCGATGCGTTCAT"
+seq_3.find(motif)
+fragment = seq_3[22:]
+fragment
+len(fragment)
+
+##Q.4
+>>> gendna = "ATCGATCGATCGATCGACTGACTAGTCATAGCTATGCATGTAGCTACTCGATCGATCGATCGATCGATCGATCGATCGATCGATCATGCTATCATCGATCGATATCGATGCATCGACTACTAT"            >>> gendna
+'ATCGATCGATCGATCGACTGACTAGTCATAGCTATGCATGTAGCTACTCGATCGATCGATCGATCGATCGATCGATCGATCGATCATGCTATCATCGATCGATATCGATGCATCGACTACTAT'
+>>> exon1 = gendna[:63]
+>>> exon1
+'ATCGATCGATCGATCGACTGACTAGTCATAGCTATGCATGTAGCTACTCGATCGATCGATCGA'
+>>> len(exon1)
+63
+>>> exon2 = gendna[90:]
+>>> codingseq = exon1+exon2
+>>> codingseq
+'ATCGATCGATCGATCGACTGACTAGTCATAGCTATGCATGTAGCTACTCGATCGATCGATCGAATCATCGATCGATATCGATGCATCGACTACTAT'
+>>> len(codingseq)
+96
+>>> len(gendna)
+123
+>>> perc_codingDNA = len(codingseq)/len(gendna) * 100
+>>> perc_codingDNA
+78.04878048780488
+>>> intron = gendna[63:90]
+>>> intron
+'TCGATCGATCGATCGATCGATCATGCT'
+>>> len(exon1)
+63
+>>> len(exon2)33
+len(intron)
+len(exon1) + len(exon2) + len(intron)
+print("##Exon intron exon##\n" + exon1 + intron.lower() + exon2)
+
